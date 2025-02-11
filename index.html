@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Tally</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Simple Tally System</h2>
+
+    <div class="tabs">
+        <button onclick="showTab('deposit')">Deposits</button>
+        <button onclick="showTab('withdrawal')">Withdrawals</button>
+        <button onclick="showTab('evaluation')">Evaluation</button>
+    </div>
+
+    <div id="deposit" class="tab-content">
+        <h3>Deposit Entry</h3>
+        <input type="number" id="depositAmount" placeholder="Enter amount">
+        <input type="text" id="depositDesc" placeholder="Description">
+        <button onclick="addEntry('deposit')">Add Deposit</button>
+        <ul id="depositList"></ul>
+    </div>
+
+    <div id="withdrawal" class="tab-content" style="display:none;">
+        <h3>Withdrawal Entry</h3>
+        <input type="number" id="withdrawAmount" placeholder="Enter amount">
+        <input type="text" id="withdrawDesc" placeholder="Description">
+        <button onclick="addEntry('withdrawal')">Add Withdrawal</button>
+        <ul id="withdrawalList"></ul>
+    </div>
+
+    <div id="evaluation" class="tab-content" style="display:none;">
+        <h3>Evaluation</h3>
+        <p>Total Deposits: <span id="totalDeposits">0</span></p>
+        <p>Total Withdrawals: <span id="totalWithdrawals">0</span></p>
+        <p>Balance: <span id="balance">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
